@@ -1,0 +1,2 @@
+# NewsApi
+Fetched news API 
