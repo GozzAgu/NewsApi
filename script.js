@@ -1,7 +1,12 @@
+const loader = document.getElementById('loader');
+
 function fetchData() {
     fetch("https://inshorts.deta.dev/news?category=science").then(response => {
             if (!response.ok) {
-                throw Error('ERROR');
+                loader.style.display = 'block';
+            }
+            else {
+                loader.style.display = 'none';
             }
         return response.json();
     })
@@ -33,3 +38,4 @@ function fetchData() {
 }
 
 fetchData();
+
